@@ -3,6 +3,8 @@ import 'package:get/get.dart';
 import 'package:location_fetch/button/index.dart';
 import 'package:location_fetch/timer/timer_vm.dart';
 
+import 'animation/animation_view_model.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -33,6 +35,7 @@ class InitialScreenBindings implements Bindings {
   void dependencies() {
     Get.lazyPut(() => ViewModel(), fenix: true);
     Get.lazyPut(() => TimerVm(), fenix: true);
+    Get.lazyPut(() => AnimationViewModel(), fenix: true);
   }
 }
 

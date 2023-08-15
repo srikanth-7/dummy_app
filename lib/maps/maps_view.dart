@@ -43,7 +43,7 @@ class _MapScreenState extends State<MapScreen> {
                     Polygon(
                       polygonId: const PolygonId("1"),
                       points: ctrlr.polyLines,
-                      fillColor: Colors.blue.withOpacity(0.1),
+                      fillColor: Colors.blue.shade100,
                       strokeWidth: 2,
                     ),
                   }),
