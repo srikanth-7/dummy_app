@@ -51,6 +51,8 @@ class PageAnimationView extends GetView<AnimationViewModel> {
                         duration: const Duration(milliseconds: 400),
                         curve: Curves.ease,
                       );
+
+                      //
                     }
                     if (controller.pageController.page == 1) {
                       Get.back();
