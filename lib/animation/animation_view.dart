@@ -25,7 +25,7 @@ class PageAnimationView extends GetView<AnimationViewModel> {
                           color: Colors.grey.shade50,
                         )),
                     child: SizedBox(
-                      height: (Get.height / 2) + controller.progress * 140,
+                      height: 300 + controller.progress * 140,
                       child: PageView(
                         controller: controller.pageController,
                         children: [
@@ -168,7 +168,6 @@ extension Views on PageAnimationView {
               icon: Icons.lock,
               hidden: true,
             ),
-            const SizedBox(height: 200),
             Text(
               "Already have an account? Sign in.",
               style: TextStyle(fontSize: 16, color: Colors.blueGrey.shade300),

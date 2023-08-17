@@ -6,6 +6,7 @@ import 'package:location_fetch/animation/animation_view.dart';
 import 'package:location_fetch/button/buttonviewmodel.dart';
 import 'package:location_fetch/button/progress.dart';
 import 'package:location_fetch/maps/maps_view.dart';
+import 'package:location_fetch/slivers/sliver_view.dart';
 import 'package:location_fetch/timer/timer.dart';
 
 // ignore: must_be_immutable
@@ -98,7 +99,13 @@ class GetLocationView extends StatelessWidget {
                 label: Text("jjdjd"),
                 avatar: Icon(Icons.add),
               ),
-            )
+            ),
+            TextButton.icon(
+                label: const Text("show sliver sticky header"),
+                onPressed: () async {
+                  Get.to(const SliverView());
+                },
+                icon: const Icon(Icons.sledding_outlined)),
           ],
         ),
       ),
