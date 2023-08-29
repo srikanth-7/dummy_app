@@ -25,7 +25,7 @@ class PageAnimationView extends GetView<AnimationViewModel> {
                           color: Colors.grey.shade50,
                         )),
                     child: SizedBox(
-                      height: 300 + controller.progress * 140,
+                      height: 400 + controller.progress * 140,
                       child: PageView(
                         controller: controller.pageController,
                         children: [

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:location_fetch/button/index.dart';
+import 'package:location_fetch/I10n/I10n.dart';
 import 'package:location_fetch/timer/timer_vm.dart';
-
+import 'package:location_fetch/toggle_tab/toggle_tab_viewmodel.dart';
 import 'animation/animation_view_model.dart';
 
 void main() {
@@ -24,6 +25,14 @@ class MyApp extends StatelessWidget {
         // useMaterial3: true,
       ),
       initialBinding: InitialScreenBindings(),
+      supportedLocales: SupportedLocales.supportedLocales,
+      locale: const Locale('en'),
+      localizationsDelegates: const [
+        // AppLocalizations.delegate, // Add this line
+        // GlobalMaterialLocalizations.delegate,
+        // GlobalWidgetsLocalizations.delegate,
+        // GlobalCupertinoLocalizations.delegate,
+      ],
 
       home: GetLocationView(),
     );
@@ -36,6 +45,7 @@ class InitialScreenBindings implements Bindings {
     Get.lazyPut(() => ViewModel(), fenix: true);
     Get.lazyPut(() => TimerVm(), fenix: true);
     Get.lazyPut(() => AnimationViewModel(), fenix: true);
+    Get.lazyPut(() => ToggleTabViewModel(), fenix: true);
   }
 }
 

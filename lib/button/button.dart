@@ -7,6 +7,7 @@ import 'package:location_fetch/button/buttonviewmodel.dart';
 import 'package:location_fetch/button/progress.dart';
 import 'package:location_fetch/maps/maps_view.dart';
 import 'package:location_fetch/timer/timer.dart';
+import 'package:location_fetch/toggle_tab/toggle_tab_view.dart';
 
 import '../slivers/sliver_test.dart';
 import '../slivers/sliver_view.dart';
@@ -116,6 +117,13 @@ class GetLocationView extends StatelessWidget {
                   // Get.to(const SliversView());
                 },
                 icon: const Icon(Icons.sledding_outlined)),
+            TextButton.icon(
+                label: const Text("show Tabbar"),
+                onPressed: () async {
+                  Get.to(const ToggleTabBarView());
+                  // Get.to(const SliversView());
+                },
+                icon: const Icon(Icons.tab)),
           ],
         ),
       ),
