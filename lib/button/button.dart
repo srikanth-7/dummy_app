@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+// import 'package:flutter_flushbar/flutter_flushbar.dart';
 import 'package:get/get.dart';
 import 'package:location_fetch/animation/animation_view.dart';
 import 'package:location_fetch/button/buttonviewmodel.dart';
@@ -124,6 +125,12 @@ class GetLocationView extends StatelessWidget {
                   // Get.to(const SliversView());
                 },
                 icon: const Icon(Icons.tab)),
+            TextButton.icon(
+                label: const Text("show snackbar"),
+                onPressed: () async {
+                  // Flushbar().show(Get.context!);
+                },
+                icon: const Icon(Icons.touch_app_sharp)),
           ],
         ),
       ),

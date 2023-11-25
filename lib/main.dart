@@ -1,12 +1,23 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:location_fetch/button/index.dart';
-import 'package:location_fetch/I10n/I10n.dart';
+import 'package:location_fetch/I10n/l10n.dart';
 import 'package:location_fetch/timer/timer_vm.dart';
 import 'package:location_fetch/toggle_tab/toggle_tab_viewmodel.dart';
 import 'animation/animation_view_model.dart';
+import 'connectivity/connectivity_util.dart';
 
-void main() {
+Future<void> initServices() async {
+  ConnectivityUtil.configureConnectivityStream();
+  debugPrint('All GetX Services Started...');
+}
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await initServices();
   runApp(const MyApp());
 }
 
